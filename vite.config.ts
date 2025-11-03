@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import compression from "vite-plugin-compression";
+// import compression from "vite-plugin-compression"; // Disabled for GitHub Pages
 import { visualizer } from "rollup-plugin-visualizer";
 
 export default defineConfig({
@@ -11,18 +11,20 @@ export default defineConfig({
         plugins: ["@emotion/babel-plugin"],
       },
     }),
-    compression({
-      algorithm: "brotliCompress",
-      ext: ".br",
-      threshold: 512,
-      compressionOptions: { level: 11 },
-    }),
-    compression({
-      algorithm: "gzip",
-      ext: ".gz",
-      threshold: 512,
-      compressionOptions: { level: 9 },
-    }),
+    // Compression disabled for GitHub Pages - GitHub Pages doesn't handle content negotiation
+    // for compressed files, which can cause MIME type issues
+    // compression({
+    //   algorithm: "brotliCompress",
+    //   ext: ".br",
+    //   threshold: 512,
+    //   compressionOptions: { level: 11 },
+    // }),
+    // compression({
+    //   algorithm: "gzip",
+    //   ext: ".gz",
+    //   threshold: 512,
+    //   compressionOptions: { level: 9 },
+    // }),
     visualizer({
       open: true,
       gzipSize: true,
