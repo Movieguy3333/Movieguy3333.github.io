@@ -1,16 +1,7 @@
 import styled from "@emotion/styled";
 import { theme } from "../../styles/theme";
 import { keyframes } from "@emotion/react";
-import { lazy, Suspense } from "react";
-const FaGithub = lazy(() =>
-  import("react-icons/fa").then((mod) => ({ default: mod.FaGithub }))
-);
-const FaLinkedin = lazy(() =>
-  import("react-icons/fa").then((mod) => ({ default: mod.FaLinkedin }))
-);
-const FaEnvelope = lazy(() =>
-  import("react-icons/fa").then((mod) => ({ default: mod.FaEnvelope }))
-);
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const HeroSection = styled.section`
   min-height: calc(100vh - 4.5rem);
@@ -135,7 +126,7 @@ export const Hero = () => {
     <HeroSection id="hero" role="region" aria-label="Introduction">
       <div className="container">
         <HeroContent>
-          <ProfileImage src="profile-pic.png" alt="Muaad Alomari" />
+          <ProfileImage src="/profile-pic.png" alt="Muaad Alomari" />
           <Title role="heading" aria-level={2}>
             Hi, I'm Muaad Alomari
           </Title>
@@ -155,11 +146,7 @@ export const Hero = () => {
               aria-label="Visit my GitHub profile"
               role="listitem"
             >
-              <Suspense
-                fallback={<div style={{ width: "1.5rem", height: "1.5rem" }} />}
-              >
-                <FaGithub aria-hidden="true" />
-              </Suspense>
+              <FaGithub aria-hidden="true" />
               <span className="sr-only">GitHub</span>
             </a>
             <a
@@ -169,11 +156,7 @@ export const Hero = () => {
               aria-label="Visit my LinkedIn profile"
               role="listitem"
             >
-              <Suspense
-                fallback={<div style={{ width: "1.5rem", height: "1.5rem" }} />}
-              >
-                <FaLinkedin aria-hidden="true" />
-              </Suspense>
+              <FaLinkedin aria-hidden="true" />
               <span className="sr-only">LinkedIn</span>
             </a>
             <a
@@ -181,11 +164,7 @@ export const Hero = () => {
               aria-label="Send me an email"
               role="listitem"
             >
-              <Suspense
-                fallback={<div style={{ width: "1.5rem", height: "1.5rem" }} />}
-              >
-                <FaEnvelope aria-hidden="true" />
-              </Suspense>
+              <FaEnvelope aria-hidden="true" />
               <span className="sr-only">Email</span>
             </a>
           </SocialLinks>

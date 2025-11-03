@@ -185,7 +185,7 @@ const projects = [
     title: "YourYugiohProfits",
     description:
       "YourYugiohProfits is a full-stack web application that helps Yu-Gi-Oh! collectors manage and analyze the financial value of their card collections. Users can search and update their collection, set personalized price alerts, and view real-time insights into portfolio worth. The valuations dashboard features summary statistics and interactive charts that break down cards by price tiers, giving collectors a clear financial snapshot of their hobby.",
-    image: "your-yugioh-profits.png",
+    image: "/your-yugioh-profits.png",
     techStack: ["React", "Node.js", "MongoDB", "Context API"],
     githubUrl: "https://github.com/Movieguy3333/YourYugiohProfits",
     liveUrl:
@@ -196,7 +196,7 @@ const projects = [
     title: "GreenBites (In Development)",
     description:
       "GreenBites is a full-stack web application that helps users track their meals and visualize the environmental impact of their diet. Built with React, TypeScript, Node.js, and TailwindCSS, it features real-time food search, meal logging, and interactive data visualizations. A custom carbon footprint model analyzes each meal’s ingredients to estimate its environmental cost, blending nutrition tracking with sustainability insights.",
-    image: "green-bites.jpg",
+    image: "/green-bites.jpg",
     techStack: ["Next.js", "TypeScript", "Drizzle", "Tailwind"],
     githubUrl: "https://github.com/CalTrackerapp/GreenBites",
     liveUrl:
