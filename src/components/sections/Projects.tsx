@@ -200,7 +200,7 @@ const projects = [
     techStack: ["Next.js", "TypeScript", "Drizzle", "Tailwind"],
     githubUrl: "https://github.com/CalTrackerapp/GreenBites",
     liveUrl:
-      "https://green-bites-demo-git-main-movieguy3333s-projects.vercel.app?_vercel_share=36US1beZrPQJra5E0U5blgFZNaB1eo6l",
+      "https://green-bites-demo-git-main-movieguy3333s-projects.vercel.app?_vercel_share=IAYKyCPXc6WcAVH3eMTnzkwpUNRpSwUF",
   },
 ];
 
