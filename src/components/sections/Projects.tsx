@@ -188,7 +188,8 @@ const projects = [
     image: "your-yugioh-profits.png",
     techStack: ["React", "Node.js", "MongoDB", "Context API"],
     githubUrl: "https://github.com/Movieguy3333/YourYugiohProfits",
-    liveUrl: "https://github.com/Movieguy3333/YourYugiohProfits",
+    liveUrl:
+      "https://your-yugioh-profits-git-master-movieguy3333s-projects.vercel.app/?_vercel_share=cU7z4LczB0G5TtvVaEbH80Qe4YkR5msp",
   },
   {
     id: 2,
@@ -198,7 +199,8 @@ const projects = [
     image: "green-bites.jpg",
     techStack: ["Next.js", "TypeScript", "Drizzle", "Tailwind"],
     githubUrl: "https://github.com/CalTrackerapp/GreenBites",
-    liveUrl: "https://github.com/CalTrackerapp/GreenBites",
+    liveUrl:
+      "https://green-bites-demo-git-main-movieguy3333s-projects.vercel.app?_vercel_share=36US1beZrPQJra5E0U5blgFZNaB1eo6l",
   },
 ];
 
