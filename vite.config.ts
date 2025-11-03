@@ -4,7 +4,7 @@ import compression from "vite-plugin-compression";
 import { visualizer } from "rollup-plugin-visualizer";
 
 export default defineConfig({
-  base: "./", // ✅ Fix for Vercel and GitHub Pages
+  base: "/", // ✅ Fix for GitHub Pages (username.github.io repositories are served from root)
   plugins: [
     react({
       babel: {
