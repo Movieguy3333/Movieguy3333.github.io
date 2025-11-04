@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 import { theme } from "../../styles/theme";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { useEffect } from "react";
 
 const ProjectsSection = styled.section`
   min-height: 100vh;
@@ -205,25 +206,37 @@ const projects = [
 ];
 
 const Projects = () => {
+  // Step 1: Scroll to project if URL has a hash
+  useEffect(() => {
+    const scrollToHash = () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      }
+    };
+
+    // Scroll on initial load
+    scrollToHash();
+
+    // Scroll on hash change (clicking anchor links)
+    window.addEventListener("hashchange", scrollToHash);
+    return () => window.removeEventListener("hashchange", scrollToHash);
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.2 },
     },
   };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-      },
-    },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
   return (
@@ -247,6 +260,7 @@ const Projects = () => {
         >
           <ProjectGrid role="list">
             {projects.map((project) => (
+              // Step 2: Make sure each card has an id matching the hash
               <ProjectCard
                 id={project.id}
                 key={project.id}
