@@ -268,11 +268,18 @@ const Projects = () => {
                 role="listitem"
                 aria-labelledby={`project-title-${project.id}`}
               >
-                <ProjectImage
-                  imageUrl={project.image}
-                  role="img"
-                  aria-label={`Screenshot of ${project.title}`}
-                />
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit ${project.title} live site`}
+                >
+                  <ProjectImage
+                    imageUrl={project.image}
+                    role="img"
+                    aria-label={`Screenshot of ${project.title}`}
+                  />
+                </a>
                 <ProjectContent>
                   <ProjectTitle id={`project-title-${project.id}`}>
                     {project.title}
